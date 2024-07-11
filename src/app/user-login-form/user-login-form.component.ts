@@ -23,9 +23,10 @@ export class UserLoginFormComponent {
 
   logInUser(): void {
     this.fetchApiData.userLogin(this.userdata).subscribe((result) => {
-      localStorage.setItem('user', JSON.stringify(result.user));
+      console.log(result);
+      localStorage.setItem('user', result.user.Username);
       localStorage.setItem('token', result.token);
-      this.dialogRef.close();
+      this.dialogRef.close(); //Closes modal on success
       this.snackBar.open('Login successful', 'OK', {
         duration: 2000
       });
