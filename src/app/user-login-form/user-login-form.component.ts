@@ -7,9 +7,9 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-user-login-form',
   templateUrl: './user-login-form.component.html',
-  styleUrl: './user-login-form.component.scss'
+  styleUrls: ['./user-login-form.component.scss']
 })
-export class UserLoginFormComponent {
+export class UserLoginFormComponent implements OnInit {
   @Input() userdata = { Username: '', Password: '' };
 
   constructor(
@@ -19,23 +19,22 @@ export class UserLoginFormComponent {
     private router: Router
   ) { }
 
-  ngOnInIt(): void { }
+  ngOnInit(): void { }
 
   logInUser(): void {
     this.fetchApiData.userLogin(this.userdata).subscribe((result) => {
       console.log(result);
       localStorage.setItem('user', result.user.Username);
       localStorage.setItem('token', result.token);
-      this.dialogRef.close(); //Closes modal on success
+      this.dialogRef.close();
       this.snackBar.open('Login successful', 'OK', {
         duration: 2000
       });
-      this.router.navigate(['movies'])
-    }, (resullt) => {
+      this.router.navigate(['movies']);
+    }, (result) => {
       this.snackBar.open('Login failed', 'OK', {
         duration: 2000
       });
     });
-
   }
 }

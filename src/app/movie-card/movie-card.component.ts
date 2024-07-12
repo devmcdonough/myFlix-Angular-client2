@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchApiDataService } from '../fetch-api-data.service'; 
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-movie-card',
@@ -10,7 +11,6 @@ export class MovieCardComponent {
 
   movies: any[] = [];
 
-  // Not sure this is right
   constructor(public fetchMovies: FetchApiDataService) { }
 
   // Calls function once component is mounted
