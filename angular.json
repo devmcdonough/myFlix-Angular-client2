@@ -104,7 +104,11 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "repo": "https://github.com/devmcdonough/myFlix-Angular-client2.git",
+            "silent": false
+          }
         }
       }
     }
