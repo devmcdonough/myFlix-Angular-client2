@@ -24,7 +24,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/my-flix-angular-client2",
+            "outputPath": "dist/myFlix-angular-client2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -102,6 +102,9 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
