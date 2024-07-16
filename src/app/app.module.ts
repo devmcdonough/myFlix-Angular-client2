@@ -18,6 +18,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MovieCardComponent } from './movie-card/movie-card.component';
 import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { MatIconModule } from '@angular/material/icon';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { MovieDetailDialogComponent } from './movie-detail-dialog/movie-detail-dialog.component';
 
 //Defines the welcome page as the start page
 const appRoutes: Routes = [
@@ -33,6 +35,8 @@ const appRoutes: Routes = [
     UserLoginFormComponent,
     MovieCardComponent,
     WelcomePageComponent,
+    UserProfileComponent,
+    MovieDetailDialogComponent
   ],
   imports: [
     RouterModule.forRoot(appRoutes),
