@@ -1,0 +1,13 @@
+{
+  "tsconfig": "tsconfig.json",
+  "entryPoints": ["src/app/**/*.ts"],
+  "out": "docs",
+  "exclude": [
+    "**/*.spec.ts",
+    "src/environments/**"
+  ],
+  "excludeExternals": true,
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "readme": "none"
+}

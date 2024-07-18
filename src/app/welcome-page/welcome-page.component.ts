@@ -5,7 +5,6 @@ import { MatDialog } from '@angular/material/dialog';
 
 /**
  * Component for the welcome page.
- * @component
  */
 @Component({
   selector: 'app-welcome-page',
